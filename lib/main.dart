@@ -2,7 +2,7 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-08 15:49:16
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-08 16:57:22
+ * @LastEditTime: 2024-06-08 18:08:23
  * @FilePath: /pcq_flutter_app/lib/main.dart
  * @Description: 
  */
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         // scaffoldBackgroundColor: Colors.amber,
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const EventPage(),
     );
   }
 }
