@@ -34,6 +34,7 @@ class EventPage extends GetView<EventController> {
               child: Row(
             children: [
               CheckboxItem(label: "复选框1号"),
+              SizedBox(width: 20),
               CheckboxItem(label: "复选框2号"),
             ],
           )
