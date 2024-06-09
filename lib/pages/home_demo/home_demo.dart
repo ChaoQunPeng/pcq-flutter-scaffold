@@ -2,12 +2,14 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-08 22:08:55
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-09 15:20:58
+ * @LastEditTime: 2024-06-09 16:37:07
  * @FilePath: /pcq_flutter_app/lib/pages/home_demo/home_demo.dart
  * @Description: 
  */
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'tap_box_a.dart';
 
 class HomeDemo extends StatelessWidget {
   const HomeDemo({super.key});
@@ -23,7 +25,9 @@ class HomeDemo extends StatelessWidget {
         ),
         ButtonSection(),
         TextSection(description: "哈哈哈哈哈哈"),
-        CheckBoxSection(),
+        // CheckBoxSection(),
+        // TapboxA(),
+        ParentWidgetState()
       ],
     );
   }
@@ -110,7 +114,7 @@ class TitleSection extends StatelessWidget {
             ],
           ),
         ),
-        FavoriteWidget()
+        FavoriteWidget(),
       ],
     ).paddingAll(30);
   }
@@ -139,7 +143,11 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
           children: [
             Icon(_isFavorited ? Icons.star : Icons.star_border,
                 color: Colors.red),
-            Text("$_favoriteCount"),
+            SizedBox(
+              width: 20,
+              // child 参数要在最后一个
+              child: Text("$_favoriteCount"),
+            ),
           ],
         ));
   }
