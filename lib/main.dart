@@ -2,7 +2,7 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-08 15:49:16
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-08 18:08:23
+ * @LastEditTime: 2024-06-08 22:14:54
  * @FilePath: /pcq_flutter_app/lib/main.dart
  * @Description: 
  */
@@ -28,11 +28,11 @@ class MyApp extends StatelessWidget {
           titleTextStyle: TextStyle(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         // scaffoldBackgroundColor: Colors.amber,
         useMaterial3: true,
       ),
-      home: const EventPage(),
+      home: const HomeDemo(),
     );
   }
 }
