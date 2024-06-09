@@ -2,7 +2,7 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-08 22:08:55
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-09 14:40:33
+ * @LastEditTime: 2024-06-09 15:20:58
  * @FilePath: /pcq_flutter_app/lib/pages/home_demo/home_demo.dart
  * @Description: 
  */
@@ -23,7 +23,7 @@ class HomeDemo extends StatelessWidget {
         ),
         ButtonSection(),
         TextSection(description: "哈哈哈哈哈哈"),
-        CheckBoxSection()
+        CheckBoxSection(),
       ],
     );
   }
@@ -110,11 +110,38 @@ class TitleSection extends StatelessWidget {
             ],
           ),
         ),
-        Row(
-          children: [Icon(Icons.star, color: Colors.red), Text("41")],
-        )
+        FavoriteWidget()
       ],
     ).paddingAll(30);
+  }
+}
+
+class FavoriteWidget extends StatefulWidget {
+  const FavoriteWidget({super.key});
+
+  @override
+  State<FavoriteWidget> createState() => _FavoriteWidgetState();
+}
+
+class _FavoriteWidgetState extends State<FavoriteWidget> {
+  bool _isFavorited = true;
+  int _favoriteCount = 41;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+        onTap: () {
+          _isFavorited = !_isFavorited;
+          _isFavorited ? _favoriteCount++ : _favoriteCount--;
+          setState(() {});
+        },
+        child: Row(
+          children: [
+            Icon(_isFavorited ? Icons.star : Icons.star_border,
+                color: Colors.red),
+            Text("$_favoriteCount"),
+          ],
+        ));
   }
 }
 
