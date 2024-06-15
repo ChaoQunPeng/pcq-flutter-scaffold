@@ -2,12 +2,13 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-08 15:49:16
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-09 17:00:10
+ * @LastEditTime: 2024-06-11 11:42:14
  * @FilePath: /pcq_flutter_app/lib/main.dart
  * @Description: 
  */
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pcq_flutter_app/pages/basic_widget_index/basic_widget_index.dart';
 import 'pages/index.dart';
 
 void main() {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         // scaffoldBackgroundColor: Colors.amber,
         useMaterial3: true,
       ),
-      home: const FormIndex(),
+      home: const BasicWidgetIndex(),
     );
   }
 }
