@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 
-class EventController extends GetxController {
-  EventController();
+class ScreenutilController extends GetxController {
+  ScreenutilController();
 
   _initData() {
-    update(["event"]);
+    update(["screenutil"]);
   }
 
   void onTap() {}
