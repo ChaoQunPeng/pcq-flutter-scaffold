@@ -2,15 +2,14 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-08 15:49:16
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-15 15:07:17
+ * @LastEditTime: 2024-06-16 15:39:44
  * @FilePath: /pcq_flutter_app/lib/main.dart
  * @Description: 
  */
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pcq_flutter_app/common/index.dart';
-import 'package:pcq_flutter_app/pages/basic_widget_index/basic_widget_index.dart';
-import 'pages/index.dart';
+import 'package:pcq_flutter_app/pages/index_view/index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,16 +27,24 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           color: Colors.blue,
           titleTextStyle: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
+          ),
+          iconTheme: IconThemeData(
+            color: Colors.white,
           ),
         ),
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         // scaffoldBackgroundColor: Colors.amber,
         useMaterial3: true,
       ),
-      home: const BasicWidgetIndex(),
+
+      // home: const IndexViewPage(),
+      // 路由
+      initialRoute: RouteNames.indexView,
+      getPages: RoutePages.list,
+      navigatorObservers: [RoutePages.observer],
     );
   }
 }
