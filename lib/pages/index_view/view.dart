@@ -2,7 +2,7 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-16 11:56:50
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-16 17:24:42
+ * @LastEditTime: 2024-06-17 16:57:37
  * @FilePath: /pcq_flutter_app/lib/pages/index_view/view.dart
  * @Description: 
  */
@@ -61,7 +61,7 @@ class IndexViewPage extends GetView<IndexViewController> {
       id: "index_view",
       builder: (_) {
         return Scaffold(
-          appBar: AppBar(title: const Text("导航")),
+          appBar: AppBar(title: Text('导航 ${controller.version}')),
           body: SafeArea(
             child: _buildView(),
           ),
