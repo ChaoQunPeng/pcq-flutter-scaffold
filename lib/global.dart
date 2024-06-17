@@ -2,7 +2,7 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-17 14:16:53
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-17 16:31:30
+ * @LastEditTime: 2024-06-17 17:16:28
  * @FilePath: /pcq_flutter_app/lib/global.dart
  * @Description: 
  */
@@ -18,8 +18,9 @@ class Global {
     // 表示先就行原生端（ios android）插件注册，然后再处理后续操作，这样能保证代码运行正确。
     WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-
     WidgetsFlutterBinding.ensureInitialized();
+
+    await Storage().init();
 
     await Future.wait([
       Get.putAsync<ConfigService>(() async => await ConfigService().init()),

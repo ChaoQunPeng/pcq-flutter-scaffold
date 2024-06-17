@@ -41,6 +41,7 @@ dependencies:
   extended_image: ^8.2.1
   flutter_native_splash: ^2.2.16
   package_info_plus: ^8.0.0
+  shared_preferences: ^2.2.3
 
 dev_dependencies:
   flutter_test:
