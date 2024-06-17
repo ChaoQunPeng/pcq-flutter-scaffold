@@ -2,7 +2,7 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-08 15:49:16
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-16 20:01:45
+ * @LastEditTime: 2024-06-17 14:23:53
  * @FilePath: /pcq_flutter_app/lib/main.dart
  * @Description: 
  */
@@ -10,10 +10,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:pcq_flutter_app/common/index.dart';
-import 'package:pcq_flutter_app/pages/index.dart';
-import 'package:pcq_flutter_app/pages/index_view/index.dart';
+import 'package:pcq_flutter_app/global.dart';
 
-void main() {
+void main() async {
+  await Global.init();
   runApp(const MyApp());
 }
 

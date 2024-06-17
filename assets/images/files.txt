@@ -1,0 +1,2 @@
+static const launcherPng = 'assets/images/launcher.png';
+static const splashJpg = 'assets/images/splash.jpg';

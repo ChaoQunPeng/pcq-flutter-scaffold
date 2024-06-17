@@ -2,7 +2,7 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-16 19:21:48
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-16 20:00:50
+ * @LastEditTime: 2024-06-17 14:33:30
  * @FilePath: /pcq_flutter_app/lib/pages/splash/view.dart
  * @Description: 
  */
@@ -16,7 +16,7 @@ class SplashPage extends GetView<SplashController> {
   const SplashPage({Key? key}) : super(key: key);
 
   Widget _buildView() {
-    return ImageWidget.asset(
+    return const ImageWidget.asset(
       AssetsImages.splashJpg,
       fit: BoxFit.fill, // 填充整个界面
     );
