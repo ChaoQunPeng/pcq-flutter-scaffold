@@ -2,7 +2,7 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-17 14:16:53
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-17 17:16:28
+ * @LastEditTime: 2024-06-18 00:03:16
  * @FilePath: /pcq_flutter_app/lib/global.dart
  * @Description: 
  */
@@ -22,8 +22,11 @@ class Global {
 
     await Storage().init();
 
+    
     await Future.wait([
       Get.putAsync<ConfigService>(() async => await ConfigService().init()),
     ]).whenComplete(() {});
+    
+    Get.put<WPHttpService>(WPHttpService());
   }
 }
