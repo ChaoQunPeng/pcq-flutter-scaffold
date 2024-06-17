@@ -2,7 +2,7 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-08 15:49:16
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-17 14:23:53
+ * @LastEditTime: 2024-06-17 18:30:04
  * @FilePath: /pcq_flutter_app/lib/main.dart
  * @Description: 
  */
@@ -47,11 +47,18 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
 
-          // home: const IndexViewPage(),
           // 路由
+          // home: const IndexViewPage(),
           initialRoute: RouteNames.splash,
           getPages: RoutePages.list,
           navigatorObservers: [RoutePages.observer],
+
+          // 多语言
+          translations: Translation(), // 词典
+          localizationsDelegates: Translation.localizationsDelegates, // 代理
+          supportedLocales: Translation.supportedLocales, // 支持的语言种类
+          locale: ConfigService.to.locale, // 当前语言种类
+          fallbackLocale: Translation.fallbackLocale, // 默认语言种类
 
           // builder
           builder: (context, widget) {

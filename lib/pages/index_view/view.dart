@@ -2,7 +2,7 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-16 11:56:50
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-17 16:57:37
+ * @LastEditTime: 2024-06-17 19:35:57
  * @FilePath: /pcq_flutter_app/lib/pages/index_view/view.dart
  * @Description: 
  */
@@ -50,7 +50,15 @@ class IndexViewPage extends GetView<IndexViewController> {
     }
 
     return ListView(
-      children: list,
+      children: [
+        ...list,
+        ElevatedButton(
+          onPressed: controller.changeLanguage,
+          child: Text(
+            '${LocaleKeys.commonConfirm.tr} ${ConfigService.to.locale.languageCode}',
+          ),
+        )
+      ],
     );
   }
 
