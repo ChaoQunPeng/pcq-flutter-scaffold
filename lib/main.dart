@@ -2,7 +2,7 @@
  * @Author: PengChaoQun 1152684231@qq.com
  * @Date: 2024-06-08 15:49:16
  * @LastEditors: PengChaoQun 1152684231@qq.com
- * @LastEditTime: 2024-06-16 18:24:50
+ * @LastEditTime: 2024-06-16 20:01:45
  * @FilePath: /pcq_flutter_app/lib/main.dart
  * @Description: 
  */
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
 
           // home: const IndexViewPage(),
           // 路由
-          initialRoute: RouteNames.indexView,
+          initialRoute: RouteNames.splash,
           getPages: RoutePages.list,
           navigatorObservers: [RoutePages.observer],
 
